@@ -63,21 +63,22 @@ public class Sketch extends PApplet {
       line(intLines, width / (float) (2), intLines, height + (float) (10));
     }
 // A 8 petal flower that uses a loop to draw the petals evenly spaced around the center of the flower (bottom right)
-int numPetals = 8;
-float petalWidth = 50;
-float petalHeight = 100;
+int intPetals = 8;
 float centerX = 3 * width / 4;
 float centerY = 3 * height / 4;
-float radius = 50;
-// Draw the petals
-for (int i = 0; i < numPetals; i++) {
-  float angle = i * TWO_PI / numPetals;
-  float petalCenterX = centerX + radius * cos(angle);
-  float petalCenterY = centerY + radius * sin(angle);
-  ellipse(petalCenterX, petalCenterY, petalWidth, petalHeight);
-}
+// Draws the petals
+    for (int i = 0; i < intPetals; i++) {
+      fill(220,93,52);
+      pushMatrix();
+      translate((float) (0.75 * width), (float) (0.75 * height));
+      rotate(-i * PI / 4);
+      translate((float) (width / 12), 0);
+      ellipse(0, 0, (float) (width / 6), (float) (height / 22));
+      popMatrix();
+
+    }
 // Draw the center of the flower
-fill(255, 255, 0);
+fill(38,108,45);
 ellipse(centerX, centerY, 50, 50);
 }
 }
