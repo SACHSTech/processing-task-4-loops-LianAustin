@@ -48,10 +48,10 @@ public class Sketch extends PApplet {
 
   for (int i = 0; i < intCircleRows; i++) {
     for (int j = 0; j < intCircleCols; j++) {
-      int x = width / 2 + j * intCircleWidth + intCircleWidth / 2;
-      int y = i * intCircleHeight + intCircleHeight / 2;
+      int intX = width / 2 + j * intCircleWidth + intCircleWidth / 2;
+      int intY = i * intCircleHeight + intCircleHeight / 2;
       fill(255, 50, 150);
-      ellipse(x, y, intCircleWidth / 2, intCircleHeight / 2);
+      ellipse(intX, intY, intCircleWidth / 2, intCircleHeight / 2);
     }
   }
 
@@ -64,8 +64,8 @@ public class Sketch extends PApplet {
     }
 // A 8 petal flower that uses a loop to draw the petals evenly spaced around the center of the flower (bottom right)
 int intPetals = 8;
-float centerX = 3 * width / 4;
-float centerY = 3 * height / 4;
+float fltCenterX = 3 * width / 4;
+float fltCenterY = 3 * height / 4;
 // Draws the petals
     for (int i = 0; i < intPetals; i++) {
       fill(220,93,52);
@@ -79,6 +79,6 @@ float centerY = 3 * height / 4;
     }
 // Draw the center of the flower
 fill(38,108,45);
-ellipse(centerX, centerY, 50, 50);
+ellipse(fltCenterX, fltCenterY, 50, 50);
 }
 }
