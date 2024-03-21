@@ -79,6 +79,6 @@ float fltCenterY = 3 * height / 4;
     }
 // Draw the center of the flower
 fill(38,108,45);
-ellipse(fltCenterX, fltCenterY, 50, 50);
+ellipse(width * 0.75f, height * 0.75f, width / 12f, height / 12f);
 }
 }
