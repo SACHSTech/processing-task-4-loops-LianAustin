@@ -55,18 +55,18 @@ public class Sketch extends PApplet {
     }
   }
 
-  // A horizontal grayscale gradient (bottom left)
+    // A horizontal grayscale gradient (bottom left)
     int intLineColour = 0;
     for(int intLines = 0; intLines <= width / (float) (2); intLines++){
       intLineColour = intLineColour + 1;
       stroke(intLineColour, intLineColour, intLineColour);
       line(intLines, width / (float) (2), intLines, height + (float) (10));
     }
-// A 8 petal flower that uses a loop to draw the petals evenly spaced around the center of the flower (bottom right)
-int intPetals = 8;
-float fltCenterX = 3 * width / 4;
-float fltCenterY = 3 * height / 4;
-// Draws the petals
+    // A 8 petal flower that uses a loop to draw the petals evenly spaced around the center of the flower (bottom right)
+    int intPetals = 8;
+    float fltCenterX = 3 * width / 4;
+    float fltCenterY = 3 * height / 4;
+    // Draws the petals
     for (int i = 0; i < intPetals; i++) {
       fill(220,93,52);
       pushMatrix();
